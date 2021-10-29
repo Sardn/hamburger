@@ -22,3 +22,47 @@ body, html {
      cursor: pointer;
      margin: 0 auto;
  }
+ .hamburger__btn {
+     background-color: white;
+     border: none;
+     display: block;
+     width: 100%;
+     height: 8px;
+     border-radius: 3px;
+     cursor: pointer;
+     position: relative;
+     outline: none;
+ }
+ .hamburger:focus-within {
+     
+     border: 3px solid aqua;
+     border-radius: 3px;
+     padding: 5px;
+ }
+ .hamburger__btn::after, .hamburger__btn::before {
+     content: '';
+     position: absolute;
+     background-color: white;
+     width: 100%;
+     height: 8px;
+     border-radius: 3px;
+     left: 0;
+     transition-property: transform;
+     transition-duration: 500ms;
+ }
+ .hamburger__btn::after {
+     top: 16px;
+ }
+ .hamburger__btn::before {
+     top: 32px;
+ }
+ .active.hamburger .hamburger__btn {
+     background-color: rgba(0, 0, 0, 0);
+ }
+ .active.hamburger .hamburger__btn::after {
+    transform: rotate(45deg);
+}
+.active.hamburger .hamburger__btn::before {
+    transform: rotate(-45deg);
+    top: 16px;
+}

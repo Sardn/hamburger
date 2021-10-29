@@ -13,5 +13,12 @@
             <button class="hamburger__btn"></button>
         </div>
     </div>
+    <script>
+        let hamburger = document.querySelector(".hamburger");
+        hamburger.addEventListener("click", (e) => {
+            // e.target.closest(".hamburger").classlist.toggle("is-active");
+            hamburger.classList.toggle("active");
+        });
+    </script>
 </body>
 </html>
